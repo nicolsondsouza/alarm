@@ -30,7 +30,7 @@ public class Alarm extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     	Context context = this.cordova.getActivity().getApplicationContext();
-    	if (action.equals("echo")) {
+    	if (action.equals("setAlarm")) {
     		long date = args.getLong(0);
 			
 			SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this.cordova.getActivity());
